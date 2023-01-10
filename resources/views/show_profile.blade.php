@@ -31,7 +31,7 @@
                                     value="{{ $user->is_admin ? 'Admin' : 'Member' }}" disabled>
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Update Password</label>
                                 <input type="password" name="password" class="form-control">
                             </div>
                             <div class="form-group">

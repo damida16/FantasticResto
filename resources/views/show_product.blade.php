@@ -5,16 +5,18 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Product Detail') }}</div>
+                    <div class="card-header mt-2">
+                        <h4>Product Detail</h4>
+                    </div>
 
                     <div class="card-body">
                         <div class="d-flex justify-content-around">
-                            <div class="">
+                            <div class="mx-5">
                                 <img src="{{ url('storage/' . $product->image) }}" alt="" width="200px">
                             </div>
                             <div class="">
                                 <h1>{{ $product->name }}</h1>
-                                <h6>{{ $product->description }}</h6>
+                                <p>{{ $product->description }}</p>
                                 <h3>Rp{{ $product->price }}</h3>
                                 <hr>
                                 <p>{{ $product->stock }} left</p>
@@ -23,7 +25,7 @@
                                         @csrf
                                         <div class="input-group mb-3">
                                             <input type="number" class="form-control" aria-describedby="basic-addon2"
-                                                name="amount" value=1>
+                                                name="amount" value=1 min="1">
                                             <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary" type="submit">Add to
                                                     cart</button>
