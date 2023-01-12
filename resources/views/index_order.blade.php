@@ -53,9 +53,11 @@
                             @endif
                         </td>
                         <td>
+                            @if (Auth::check() && Auth::user()->user)
                             <a href="{{route('index_product')}}" class="btn btn-primary">
                                 Re-order
                             </a>
+                            @endif
                         </td>
                     </tr>
                 </tbody>

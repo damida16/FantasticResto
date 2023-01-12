@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Redirect;
 
 /*
@@ -45,4 +46,6 @@ Route::post('/order/{order}/confirm', [OrderController::class, 'confirm_payment'
 
 Route::get('/profile', [ProfileController::class, 'show_profile'])->name('show_profile');
 Route::post('/profile', [ProfileController::class, 'edit_profile'])->name('edit_profile');
+
+Route::get('/about', [AboutController::class, 'about_us'])->name('about_us');
 

@@ -51,9 +51,6 @@
                             <div class="product-card">
                                 <img class="card-img-top" src="{{ url('storage/' . $product->image) }}" alt="Card image cap">
                                 <h1 class="title">{{ $product->name }}</h1>
-                                <p class="desc">
-                                    {{ $product->description }}
-                                </p>
                                 <p class="price">Rp{{ $product->price }}</p>
                                 <form action="{{ route('show_product', $product) }}" method="get">
                                     <button type="submit" class="btn btn-master btn-primary w-100 mt-3">Show detail</button>
@@ -72,10 +69,13 @@
                         </div>
                         @endforeach
                     </div>
+                    
                     <div class="d-flex flex-column justify-content-end align-items-end">
+                        @if (Auth::check() && Auth::user()->is_admin)
                         <a href="{{ route('create_product') }}">
                             <button type="button" class="btn btn-primary w-100 mt-3">Create Product</button>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>

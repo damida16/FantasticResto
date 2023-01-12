@@ -40,9 +40,6 @@
                             <a class="nav-link active" aria-current="page" href="{{route('index_product')}}">Home</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link" href="#">Menu</a>
-                        </li>
-                        <li class="nav-item mx-3">
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item mx-3">
